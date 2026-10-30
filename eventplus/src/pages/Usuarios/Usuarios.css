@@ -1,0 +1,348 @@
+/* Usuarios.css */
+
+.cadastro-usuario-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* --- Títulos Padronizados --- */
+.titulo-pagina {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.usuario-topo .titulo-pagina {
+  color: #222222;
+}
+
+.usuario-topo .titulo-pagina::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #b52d4a;
+  margin-top: 6px;
+}
+
+.usuario-lista .titulo-pagina {
+  color: #ffffff;
+}
+
+.usuario-lista .titulo-pagina::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #ffffff;
+  margin-top: 6px;
+}
+
+/* --- Seção Superior (Formulário e Ilustração) --- */
+.usuario-topo {
+  width: 100%;
+  padding: 3rem 1.5rem 4rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.usuario-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 950px;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.usuario-ilustracao {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+
+.usuario-ilustracao img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Formulário --- */
+.usuario-form {
+  flex: 1;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.usuario-form .linha {
+  width: 100%;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-end;
+}
+
+.usuario-form .linha > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilização dos Inputs e Selects no estilo linha inferior */
+.usuario-form input,
+.usuario-form select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #707070;
+  background: transparent;
+  padding: 8px 4px;
+  font-size: 0.95rem;
+  color: #333333;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.usuario-form input::placeholder {
+  color: #999999;
+  font-weight: 300;
+}
+
+.usuario-form input:focus,
+.usuario-form select:focus {
+  border-bottom-color: #b52d4a;
+}
+
+.usuario-form select {
+  color: #555555;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23333333' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  padding-right: 24px;
+}
+
+/* Botões do Formulário */
+.usuario-form .botao-principal {
+  width: 100%;
+  padding: 10px 16px;
+  margin-top: 0.5rem;
+  background-color: #b52d4a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.usuario-form .botao-principal:hover:not(:disabled) {
+  background-color: #9a233d;
+}
+
+.usuario-form .botao-secundario {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #b52d4a;
+  border: 1px solid #b52d4a;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.usuario-form .mensagem {
+  font-size: 0.85rem;
+  color: #b52d4a;
+  text-align: center;
+  margin: -0.5rem 0 0;
+}
+
+/* --- Seção Inferior (Lista de Usuários com Fundo Bordô) --- */
+.usuario-lista {
+  width: 100%;
+  background-color: #b52d4a;
+  color: #ffffff;
+  padding: 3.5rem 1.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.tabela-rolagem {
+  width: 100%;
+  max-width: 850px;
+  margin-top: 2.5rem;
+  overflow-x: auto;
+}
+
+.tabela-rolagem table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabela-rolagem th {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.tabela-rolagem td {
+  font-size: 0.9rem;
+  color: #ffffff;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+}
+
+.coluna-acao {
+  text-align: center !important;
+  width: 70px;
+}
+
+/* Ícones de Editar e Deletar na Tabela */
+.icone-botao {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.icone-botao:hover:not(:disabled) {
+  opacity: 0.75;
+}
+
+.icone-botao svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.lista-vazia {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* --- Modal de Confirmação de Exclusão --- */
+.modal-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 8px;
+  padding: 1.75rem;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal h2 {
+  font-size: 1.15rem;
+  color: #111111;
+  margin: 0;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.modal-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.modal-acoes .botao-secundario {
+  background: transparent;
+  border: 1px solid #cccccc;
+  color: #555555;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-acoes .botao-principal {
+  background-color: #b52d4a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Acessibilidade --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .usuario-conteudo {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .usuario-form .linha {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

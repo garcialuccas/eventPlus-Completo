@@ -1,0 +1,15 @@
+.botao {
+  min-height: 46px;
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.botao:hover:not(:disabled) { background: var(--cor-primaria-escura); transform: translateY(-1px); }
+.botao:active:not(:disabled) { transform: translateY(0); }

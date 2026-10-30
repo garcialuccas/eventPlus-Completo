@@ -1,0 +1,118 @@
+/* ModalConfirmacao.css */
+
+/* Overlay fixo que cobre toda a janela independentemente do elemento pai */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  box-sizing: border-box;
+}
+
+/* Contentor do modal centralizado */
+.modal-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 440px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Cabeçalho */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666666;
+  line-height: 1;
+  padding: 0;
+}
+
+/* Corpo */
+.modal-body {
+  padding: 1.5rem 0;
+}
+
+.modal-body p {
+  font-size: 0.9rem;
+  color: #555555;
+  margin: 0;
+}
+
+/* Rodapé com botões */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.btn-manter {
+  background-color: #ffffff;
+  color: #555555;
+  border: 1px solid #cccccc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-manter:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-cancelar-modal {
+  background-color: #b52d4a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancelar-modal:hover {
+  background-color: #9a233d;
+}

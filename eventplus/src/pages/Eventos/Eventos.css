@@ -1,0 +1,180 @@
+/* Eventos.css */
+
+.main-eventos {
+  width: 100%;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem 5rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.container-eventos {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* --- Filtros por Categoria --- */
+.filtros-container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333333;
+  cursor: pointer;
+  padding: 6px 20px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.filtro-btn:hover {
+  color: #b52d4a;
+}
+
+.filtro-btn.ativo {
+  background-color: #b52d4a;
+  color: #ffffff;
+}
+
+/* --- Grade de Eventos (3 Colunas) --- */
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+  width: 100%;
+  justify-items: center;
+}
+
+/* --- Mensagens de Estado --- */
+.status-mensagem {
+  width: 100%;
+  text-align: center;
+  color: #666666;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+}
+
+/* CardEvento.css */
+
+.card-evento {
+  border: 1.5px solid #b52d4a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-evento:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-evento-imagem-container {
+  width: 100%;
+  height: 160px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.card-evento-imagem-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-evento-conteudo {
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.card-evento-categoria {
+  align-self: flex-start;
+  background-color: #dce3fc;
+  color: #2b3a67;
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-evento-titulo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.card-evento-descricao {
+  font-size: 0.875rem;
+  color: #444444;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+/* --- REMOVE A DECORAÇÃO DO LINK DEFINITIVAMENTE --- */
+.card-evento a,
+.card-evento a:visited,
+.card-evento-link,
+a.card-evento-link {
+  text-decoration: none !important;
+  color: #b52d4a !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: auto;
+  outline: none;
+  border: none;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.card-evento a:hover,
+.card-evento-link:hover {
+  text-decoration: none !important;
+  opacity: 0.75;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+  .eventos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .main-eventos {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .filtros-container {
+    justify-content: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .eventos-grid {
+    grid-template-columns: 1fr;
+  }
+}
